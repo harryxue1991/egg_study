@@ -9,6 +9,6 @@ module.exports = app => {
 
   router.get('/news', controller.news.index);
   router.get('/news/content', controller.news.content);
-
   router.get('/news/:id', controller.news.getParams);
+  router.get('/news/emoji/search', controller.news.getEmoji);
 };

@@ -22,6 +22,13 @@ class NewsController extends Controller {
     const {id} = this.ctx.params;
     this.ctx.body = id
   }
+
+  async getEmoji() {
+    const list = await this.service.news.getEmoji();
+    await this.ctx.render('news/emoji.ejs', {
+      list
+    })
+  }
 }
 
 module.exports = NewsController;

@@ -8,6 +8,21 @@
 </head>
 <body>
     <h1>hello world</h1>
-    
+    <input type="text" id="input">
+    <button id="btn">搜索图片</button>
 </body>
 </html>
+
+<script>
+    var input = document.getElementById('input');
+    var btn = document.getElementById("btn");
+    btn.onclick = function() {
+        console.log(input.value)
+        if(input.value == '') {
+            return;
+        }else{
+            window.location.href = `/news/emoji/search?keyword=${input.value}`
+        }
+    }
+
+</script>
