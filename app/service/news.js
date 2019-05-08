@@ -4,7 +4,10 @@ const Service = require('egg').Service;
 
 class NewsService extends Service {
   async getNewsList() {
-    var List = [1,2,3,4,5,6];
+    var List = [
+      {url: 'https://www.baidu.com', title: '百度'},
+      {url: 'http://xuexinchao.top', title: '薛辛超'}
+    ];
     return List;
   }
 }
