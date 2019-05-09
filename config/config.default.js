@@ -16,11 +16,23 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1557282056965_2632';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = [
+    'printdate',
+    'forbidip'
+  ];
+  // 给printdate中间件传入参数
+  config.printdate = {
+    name: '薛辛超'
+  }
+  config.forbidip = {
+    ip: [
+      '192.168.1.113'
+    ],
+  };
 
   // add your user config here
   const userConfig = {
-    // myAppName: 'egg',
+    myAppName: 'egg',
   };
 
   config.view = {

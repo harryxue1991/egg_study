@@ -6,6 +6,13 @@ class NewsController extends Controller {
   async index() {
     // const {ctx} = this;
     // ctx.body = '新闻首页'
+
+    // app扩展
+    // console.log(this.app.foo())
+    // ctx扩展
+    console.log(this.ctx.getApi())
+
+    // this.app.foo()
     const List = await this.service.news.getNewsList();
     // ctx.body = 'hello world';
     await this.ctx.render('news/news.njk', {
